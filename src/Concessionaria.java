@@ -32,7 +32,7 @@ public class Concessionaria {
 
     public boolean removerVeiculo(String placa) {
         for (int i = 0; i < this.totalVeiculos; i++) {
-            if (this.veiculos.get(i).placa.equalsIgnoreCase(placa)) {
+            if (this.veiculos.get(i).disponivel && this.veiculos.get(i).placa.equalsIgnoreCase(placa)) {
                 Veiculo veiculo = this.veiculos.get(i);
                 this.veiculos.remove(veiculo);
                 this.totalVeiculos--;
